@@ -1,7 +1,9 @@
 # Asteroids
 Для запуска игры 
 ```shell
+$ python3 -m venv venv
 $ source venv/bin/activate
+$ pip3 install -r requriements.txt
 $ python3 Asteroinds/game.py
 ```
 Требования к проекту:
