@@ -125,7 +125,7 @@ class Sprite:
 
 def load_sliced_sprites(w, h, filename):
     images = []
-    master_image = pygame.image.load(os.path.join('images', filename)).convert_alpha()
+    master_image = pygame.image.load(os.path.join('Asteroids/images', filename)).convert_alpha()
 
     master_width, master_height = master_image.get_size()
     for i in range(int(master_width / w)):
@@ -136,36 +136,36 @@ def load_sliced_sprites(w, h, filename):
 explosion_images = load_sliced_sprites(128, 128, 'explosion_slice.png')
 explosion_info = ImageInfo([64, 64], [128, 128], 64, 7, True)
 
-nebula = pygame.image.load(os.path.join('images', 'background.png'))
+nebula = pygame.image.load(os.path.join('Asteroids/images', 'background.png'))
 
-ship_image = pygame.image.load(os.path.join('images', 'ship.png'))
+ship_image = pygame.image.load(os.path.join('Asteroids/images', 'ship.png'))
 ship_info = ImageInfo([45, 45], [90, 90], 45)
 
-thrusted_ship_image = pygame.image.load(os.path.join('images', 'ship_thrusted.png'))
+thrusted_ship_image = pygame.image.load(os.path.join('Asteroids/images', 'ship_thrusted.png'))
 thrusted_ship_info = ImageInfo([45, 45], [90, 90], 45)
 
-rock_image = pygame.image.load(os.path.join('images', 'asteroid_sprite.png'))
+rock_image = pygame.image.load(os.path.join('Asteroids/images', 'asteroid_sprite.png'))
 rock_info = ImageInfo([45, 45], [90, 90], 45)
 
-missile_image = pygame.image.load(os.path.join('images', 'shell.png'))
+missile_image = pygame.image.load(os.path.join('Asteroids/images', 'shell.png'))
 missile_info = ImageInfo([5, 5], [10, 10], 5, 50)
 
-missile_sound = pygame.mixer.Sound(os.path.join('sounds', 'missile.ogg'))
+missile_sound = pygame.mixer.Sound(os.path.join('Asteroids/sounds', 'missile.ogg'))
 missile_sound.set_volume(1)
 
-thruster_sound = pygame.mixer.Sound(os.path.join('sounds', 'thrust.ogg'))
+thruster_sound = pygame.mixer.Sound(os.path.join('Asteroids/sounds', 'thrust.ogg'))
 thruster_sound.set_volume(1)
 
-explosion_sound = pygame.mixer.Sound(os.path.join('sounds', 'explosion.ogg'))
+explosion_sound = pygame.mixer.Sound(os.path.join('Asteroids/sounds', 'explosion.ogg'))
 explosion_sound.set_volume(1)
 
-pygame.mixer.music.load(os.path.join('sounds', 'trektheme.ogg'))
+pygame.mixer.music.load(os.path.join('Asteroids/sounds', 'trektheme.ogg'))
 pygame.mixer.music.set_volume(0.3)
 pygame.mixer.music.play()
 
-splash = pygame.image.load(os.path.join('images', 'splash.png'))
+splash = pygame.image.load(os.path.join('Asteroids/images', 'splash.png'))
 
-splash = pygame.image.load(os.path.join('images', 'splash.png'))
+splash = pygame.image.load(os.path.join('Asteroids/images', 'splash.png'))
 
 ship = Ship([WIDTH // 2, HEIGHT // 2], [0, 0], 0, ship_image, thrusted_ship_image, ship_info)
 rock_group = set([])
